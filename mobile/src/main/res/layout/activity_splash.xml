@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/splash_page_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SplashActivity" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="center_horizontal|bottom"
+        android:gravity="center">
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/splash_page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/splash_skip_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginLeft="@dimen/splash_title_text_size"
+            android:layout_marginStart="@dimen/splash_title_text_size"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Skip"
+            android:textColor="@color/generic_white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/splash_next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/splash_title_text_size"
+            android:layout_marginRight="@dimen/splash_title_text_size"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/splash_finish_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/splash_title_text_size"
+            android:layout_marginRight="@dimen/splash_title_text_size"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Finish"
+            android:textColor="@color/generic_white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+</FrameLayout>
+

@@ -1,9 +1,11 @@
-package io.madd.taskmanager;
+package io.madd.taskmanager.ui;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import io.madd.taskmanager.R;
 
 
 public class MainActivity extends ActionBarActivity {

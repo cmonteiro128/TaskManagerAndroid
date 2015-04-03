@@ -1,0 +1,51 @@
+<!-- Copyright (C) 2015 Mozart Alexander Louis.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<resources>
+
+    <!-- Project Mango Specific Colors -->
+    <color name="primary">#000000</color>
+    <color name="primaryFaded">#000000</color>
+    <color name="primary_dark">#000000</color>
+    <color name="primary_light">#000000</color>
+    <color name="accent">#000000</color>
+    <color name="primary_text">#000000</color>
+    <color name="secondary_text">#000000</color>
+    <color name="icons">#000000</color>
+    <color name="divider">#000000</color>
+    <color name="selected_gray">#000000</color>
+
+    <!-- Generic Colors -->
+    <color name="generic_white">#FFFFFF</color>
+    <color name="generic_black">#000000</color>
+    <color name="generic_red">#FF0000</color>
+    <color name="generic_green">#00FF00</color>
+    <color name="generic_blue">#0000FF</color>
+    <color name="generic_yellow">#FFFF00</color>
+    <color name="generic_cyan">#00FFFF</color>
+    <color name="generic_magenta">#FF00FF</color>
+
+    <!-- Generic Colors Faded 75%-->
+    <color name="generic_white_faded_75">#75FFFFFF</color>
+    <color name="generic_black_faded_75">#75000000</color>
+    <color name="generic_red_faded_75">#75FF0000</color>
+    <color name="generic_green_faded_75">#7500FF00</color>
+    <color name="generic_blue_faded_75">#750000FF</color>
+    <color name="generic_yellow_faded_75">#75FFFF00</color>
+    <color name="generic_cyan_faded_75">#7500FFFF</color>
+    <color name="generic_magenta_faded_75">#75FF00FF</color>
+
+
+</resources>
