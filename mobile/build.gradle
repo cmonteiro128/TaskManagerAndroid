@@ -21,6 +21,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: 'Parse-*.jar')
     compile project(':indicator')
     wearApp project(':wear')
     compile 'com.google.android.gms:play-services:7.0.0'
