@@ -6,9 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.parse.Parse;
-import com.parse.ParseACL;
-import com.parse.ParseCrashReporting;
-import com.parse.ParseUser;
 
 import io.madd.taskmanager.R;
 
@@ -21,7 +18,6 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         // Enable Local Datastore.
         Parse.enableLocalDatastore(this);
-
         Parse.initialize(this, "HDq3XT1Bn7lfrIOXSQ9krl18fTchq5fl8518Wa83",
                 "74cQJP8gTHOXoKtQgpDcdg0i2kNwqXbwqTL5ZubQ");
 
