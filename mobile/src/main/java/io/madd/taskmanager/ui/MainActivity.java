@@ -1,7 +1,7 @@
 package io.madd.taskmanager.ui;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -22,7 +22,8 @@ public class MainActivity extends ActionBarActivity {
         // Enable Local Datastore.
         Parse.enableLocalDatastore(this);
 
-        Parse.initialize(this, "HDq3XT1Bn7lfrIOXSQ9krl18fTchq5fl8518Wa83", "74cQJP8gTHOXoKtQgpDcdg0i2kNwqXbwqTL5ZubQ");
+        Parse.initialize(this, "HDq3XT1Bn7lfrIOXSQ9krl18fTchq5fl8518Wa83",
+                "74cQJP8gTHOXoKtQgpDcdg0i2kNwqXbwqTL5ZubQ");
 
     }
 
