@@ -6,8 +6,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.parse.Parse;
+import com.parse.ParseObject;
 
 import io.madd.taskmanager.R;
+import io.madd.taskmanager.utils.Task;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -19,6 +21,7 @@ public class MainActivity extends ActionBarActivity {
 
         // Enable Local Datastore.
         Parse.enableLocalDatastore(this);
+        ParseObject.registerSubclass(Task.class);
         Parse.initialize(this, "r54ORpak7H2WTOahHlXgwAKOUcLlCIFI6ewg9kR7", "hKfZydK1uoXTheAPleigQw2XiWpqWTcy1OqH2Qrg");
     }
 
