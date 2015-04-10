@@ -92,8 +92,8 @@ public class SplashActivity extends ActionBarActivity implements
         setContentView(R.layout.activity_splash);
 
         // Get the saved preferences and check if user has already seen SplashPage
-        mPrefs = getSharedPreferences(PreferenceUtils.RIPTA_PREFS, MODE_PRIVATE);
-        if (mPrefs.getBoolean(PreferenceUtils.RIPTA_PREFS_FIRST_START, false)) {
+        mPrefs = getSharedPreferences(PreferenceUtils.TASK_MANAGER_PREFS, MODE_PRIVATE);
+        if (mPrefs.getBoolean(PreferenceUtils.TASK_MANAGER_FIRST_START, false)) {
             switchToMainActivity();
         }
 
@@ -114,7 +114,7 @@ public class SplashActivity extends ActionBarActivity implements
         // Set up the ViewPager with the sections adapter.
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        //Bind the title indicator to the adapter
+        // Bind the title indicator to the adapter
         mViewPageIndicator.setViewPager(mViewPager);
         mViewPageIndicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
@@ -174,13 +174,12 @@ public class SplashActivity extends ActionBarActivity implements
     @Override
     public void onFragmentInteraction(boolean setSeen) {
         SharedPreferences.Editor edit = mPrefs.edit();
-        edit.putBoolean(PreferenceUtils.RIPTA_PREFS_FIRST_START,
+        edit.putBoolean(PreferenceUtils.TASK_MANAGER_FIRST_START,
                 setSeen).apply();
     }
 
     private void switchToMainActivity() {
         onFragmentInteraction(true);
-
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
