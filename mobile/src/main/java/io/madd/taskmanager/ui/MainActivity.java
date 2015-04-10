@@ -19,8 +19,7 @@ public class MainActivity extends ActionBarActivity {
 
         // Enable Local Datastore.
         Parse.enableLocalDatastore(this);
-        Parse.initialize(this, "HDq3XT1Bn7lfrIOXSQ9krl18fTchq5fl8518Wa83",
-                "74cQJP8gTHOXoKtQgpDcdg0i2kNwqXbwqTL5ZubQ");
+        Parse.initialize(this, "r54ORpak7H2WTOahHlXgwAKOUcLlCIFI6ewg9kR7", "hKfZydK1uoXTheAPleigQw2XiWpqWTcy1OqH2Qrg");
     }
 
     @Override
