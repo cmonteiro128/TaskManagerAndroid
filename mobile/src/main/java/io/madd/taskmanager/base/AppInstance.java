@@ -6,6 +6,10 @@ import android.text.TextUtils;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.parse.Parse;
+import com.parse.ParseObject;
+
+import io.madd.taskmanager.utils.ParseMangoTask;
 
 public class AppInstance extends Application {
     /**
@@ -56,6 +60,9 @@ public class AppInstance extends Application {
         super.onCreate();
         // set mInstance to this class
         mInstance = this;
+        // Enable Local Datastore.
+        Parse.enableLocalDatastore(this);
+        Parse.initialize(this, "r54ORpak7H2WTOahHlXgwAKOUcLlCIFI6ewg9kR7", "hKfZydK1uoXTheAPleigQw2XiWpqWTcy1OqH2Qrg");
     }
 
     /**
