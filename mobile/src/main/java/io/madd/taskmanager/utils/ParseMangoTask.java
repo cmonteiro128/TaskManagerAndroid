@@ -4,14 +4,24 @@ package io.madd.taskmanager.utils;
  * Created by poliaf on 4/10/2015.
  */
 
-import java.util.UUID;
+import java.util.Date;
 
 import com.parse.ParseClassName;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 @ParseClassName("Task")
 public class ParseMangoTask extends ParseObject implements MangoTask {
+
+    public ParseMangoTask(){
+        put("author", ParseUser.getCurrentUser());
+    }
+
+    public ParseMangoTask(Date created){
+        put("author", ParseUser.getCurrentUser());
+        put("created", created);
+    }
 
     public String getName() {
         return getString("name");
@@ -62,7 +72,7 @@ public class ParseMangoTask extends ParseObject implements MangoTask {
     }
 
     public void setDescription(String description){
-        put ("description", description)
+        put ("description", description);
     }
 
     public int getPoints(){
@@ -71,5 +81,25 @@ public class ParseMangoTask extends ParseObject implements MangoTask {
 
     public void setPoints(int points){
         put ("points", points);
+    }
+
+    public Date getDueDate(){
+        return getDate("dueDate");
+    }
+
+    public long getTTL() {
+        return getLong("TTL");
+    }
+
+    public void setTTL(long TTL) {
+        put("TTL", TTL);
+    }
+
+    public Date getCreationDate(){
+        return getDate("created");
+    }
+
+    public void setDueDate(Date dueDate){
+        put("dueDate", dueDate);
     }
 }

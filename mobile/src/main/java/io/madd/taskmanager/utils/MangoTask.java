@@ -20,9 +20,9 @@ public interface MangoTask {
     public int getPriority();
     public Date getCreationDate();
     public Date getDueDate();
-    public Date setDueDate(Date dueDate);
+    public void setDueDate(Date dueDate);
     public int getPoints();
     public void setPoints(int points);
-    public Date getTTL();
-    public void setTTL(Date TTL);
+    public long getTTL();
+    public void setTTL(long TTL);
 }

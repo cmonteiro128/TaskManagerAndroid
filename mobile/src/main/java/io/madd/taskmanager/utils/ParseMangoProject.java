@@ -4,9 +4,7 @@ package io.madd.taskmanager.utils;
  * Created by poliaf on 4/10/2015.
  */
 
-import java.util.Collection;
 import java.util.List;
-import java.util.UUID;
 
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
@@ -17,6 +15,10 @@ import com.parse.ParseUser;
 
 @ParseClassName("Project")
 public class ParseMangoProject extends ParseObject implements MangoProject{
+    public ParseMangoProject(){
+        put("admin", ParseUser.getCurrentUser());
+    }
+
     public String getName() {
         return getString("name");
     }
@@ -30,7 +32,8 @@ public class ParseMangoProject extends ParseObject implements MangoProject{
     }
 
     public String[] getMembers() {
-        return getRelation("members");
+        ParseRelation memberList = getRelation("members");
+        return null;
     }
 
     public int addMember(String memberID) {
@@ -46,12 +49,13 @@ public class ParseMangoProject extends ParseObject implements MangoProject{
         put("description", description);
     }
 
-    public String[] getTasks(){
-        return getRelation("tasks");
+    public List<MangoTask> getTasks(){
+        return getList("tasks");
     }
 
-    public void addTask(String task){
+    public int addTask(MangoTask task){
         add ("tasks", task);
+        return 0;
     }
 
     public String getProjectID() {
@@ -66,9 +70,19 @@ public class ParseMangoProject extends ParseObject implements MangoProject{
         put("photo", file);
     }
 
+    //removes all instances of the memberID in the member list
     public int removeMember(String memberID){
-        remove("members");
-        return 0;
+        List<String> memberList = getList("members");
+        boolean successful = false;
+        while (memberList.contains(memberID)){
+            successful = memberList.remove(memberID);
+        }
+        put("members", memberList);
+        if (successful){
+            return 0;
+        }else{
+            return -1;
+        }
     }
 
     public static ParseQuery<ParseMangoProject> getQuery() {

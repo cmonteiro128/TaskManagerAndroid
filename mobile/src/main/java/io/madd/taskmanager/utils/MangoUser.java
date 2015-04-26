@@ -4,7 +4,7 @@ package io.madd.taskmanager.utils;
  * Created by poliaf on 4/24/2015.
  */
 public interface MangoUser {
-    public String[] getUsername();
+    public String getUsername();
     public void setUsername(String name);
     public void setPassword(String password);
     public String getEmail();

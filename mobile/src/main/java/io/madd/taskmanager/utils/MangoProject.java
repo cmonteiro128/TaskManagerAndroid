@@ -1,5 +1,7 @@
 package io.madd.taskmanager.utils;
 
+import java.util.List;
+
 /**
  * Created by poliaf on 4/24/2015.
  */
@@ -15,4 +17,6 @@ public interface MangoProject {
     public void setDescription(String newName);
     public Object getPhotoFile();
     public void setPhotoFile(Object icon);
+    public List<MangoTask> getTasks();
+    public int addTask(MangoTask task);
 }
